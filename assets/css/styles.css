@@ -1,0 +1,58 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #eaeaea;
+}
+
+.video-wrapper {
+  aspect-ratio: 4 / 3;
+  background: #000;
+}
+
+#overlay {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ==== Estilo de contadores ==== */
+.counter-box {
+  border-radius: 12px;
+  padding: 20px 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.counter-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.2);
+}
+
+.counter-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.counter-value.updated {
+  transform: scale(1.2);
+  color: #fff;
+}
+/* ==== Botón Reset Contadores ==== */
+.reset-btn {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #ff8800;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 136, 0, 0.6);
+  transform: scale(1.05);
+}
+
+.reset-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(255, 136, 0, 0.8);
+}

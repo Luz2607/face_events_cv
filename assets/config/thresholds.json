@@ -1,0 +1,5 @@
+{
+  "EAR": { "close_threshold": 0.20, "open_threshold": 0.25, "min_frames": 2 },
+  "MAR": { "open_threshold": 0.60, "close_threshold": 0.50, "min_frames": 2 },
+  "BROW": { "raise_threshold_pct": 0.08, "relax_threshold_pct": 0.04, "min_frames": 2 }
+}
