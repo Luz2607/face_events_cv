@@ -6,6 +6,8 @@ import {
   loadProgrammerBox,
   loadThresholds
 } from "./ui.js";
+// >>> Telemetría a MockAPI (agregado, no bloquea nada)
+import { MockApi } from "./telemetry.js";
 
 // Elementos base
 const video = document.getElementById("video");
@@ -177,6 +179,13 @@ function renderLoop() {
       mouthEl.textContent = counters.mouthOpens;
       animateCounter("mouthCount");
     }
+
+    // >>> Envío a MockAPI (solo cuando cambian los contadores; no bloquea render)
+    MockApi.reportCounters({
+      blinks: counters.blinks,
+      browRaises: counters.browRaises,
+      mouthOpens: counters.mouthOpens
+    });
 
     // ----------- DEBUG en pantalla: EAR / MAR / BROW -----------
     if (metrics) {
